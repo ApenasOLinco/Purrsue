@@ -13,7 +13,7 @@ function bicuda($codigo)
 }
 
 // Acesso indevido à página
-if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     $codigo = Status::METODO_INVALIDO->value;
     bicuda($codigo);
 }
@@ -23,3 +23,9 @@ if (in_array(null, [$_POST['usuario'], $_POST['senha']])) {
     $codigo = Status::FORM_EM_BRANCO->value;
     bicuda($codigo);
 }
+
+// Obtém os dados do corpo da requisição
+[$usuario, $senha] = [$_POST['usuario'], $_POST['senha']];
+
+require_once "$ROOT/connection/conn.php";
+
