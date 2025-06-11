@@ -1,3 +1,9 @@
+<?php
+$ROOT = $_SERVER['DOCUMENT_ROOT'];
+
+require_once "$ROOT/err/status.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -9,11 +15,16 @@
 
 <body>
    <?php
-   require $_SERVER['DOCUMENT_ROOT'] . "/components/header.html";
+   require_once "$ROOT/components/header.html";
+
+   // Tratamento dos códigos enviados via GET
+   $code = Status::tryFrom($_GET['code']);
+   if (isset($code)) {
+      echo $code->getMensagem();
+   }
    ?>
 
-   <a></a>
-   <form action="/auth/login.php">
+   <form action="/auth/login.php" method="post">
       <label for="usuario">Nome de Usuário</label>
       <input type="text" name="usuario" id="usuario-input">
 
@@ -24,8 +35,8 @@
    </form>
 
    <h3 class="nao-tem-conta-call">Ainda não tem conta?? Crie uma!</h3>
-   <form action="/auth/cadastro.php">
 
+   <form action="/auth/cadastro.php">
    </form>
 </body>
 
