@@ -15,6 +15,7 @@ require_once "$ROOT/err/status.php";
 
 <body>
    <?php
+   // Cabeçalho das páginas
    require_once "$ROOT/components/header.html";
 
    // Tratamento dos códigos enviados via GET
