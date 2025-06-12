@@ -3,18 +3,10 @@ $ROOT = $_SERVER['DOCUMENT_ROOT'];
 
 require_once "$ROOT/err/status.php";
 require_once "$ROOT/err/mandarProIndex.php";
+require_once "authUtil.php";
 
-// Acesso indevido à página
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    $codigo = Status::METODO_INVALIDO;
-    bicuda($codigo);
-}
-
-// Formulário em branco
-if (in_array(null, $_POST)) {
-    $codigo = Status::FORM_EM_BRANCO;
-    bicuda($codigo);
-}
+impedirAcessoIndevido();
+impedirFormularioEmBranco();
 
 // Obtém os dados do corpo da requisição
 [$usuario, $senha] = [$_POST['usuario'], $_POST['senha']];
