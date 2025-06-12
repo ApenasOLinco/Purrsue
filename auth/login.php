@@ -2,15 +2,7 @@
 $ROOT = $_SERVER['DOCUMENT_ROOT'];
 
 require_once "$ROOT/err/status.php";
-
-/**
- * Te chuta de volta pra home. Ai! Ai!
- */
-function bicuda(Status $codigo)
-{
-    header("location:/pages/index.php?codigo=$codigo->value");
-    die; // É tão forte que o código morre
-}
+require_once "$ROOT/err/bicudaPraHome.php";
 
 // Acesso indevido à página
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
