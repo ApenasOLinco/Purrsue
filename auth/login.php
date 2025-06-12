@@ -2,7 +2,7 @@
 $ROOT = $_SERVER['DOCUMENT_ROOT'];
 
 require_once "$ROOT/err/status.php";
-require_once "$ROOT/err/bicudaPraHome.php";
+require_once "$ROOT/err/mandarProIndex.php";
 
 // Acesso indevido à página
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Formulário em branco
-if (in_array(null, [$_POST['usuario'], $_POST['senha']])) {
+if (in_array(null, $_POST)) {
     $codigo = Status::FORM_EM_BRANCO;
     bicuda($codigo);
 }
