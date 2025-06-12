@@ -1,7 +1,7 @@
 <?php
 /**
  * Os códigos de status que serão enviados de volta ao index.php em certas ocasiões.
- * Criada pra facilitar a expansão de possíveis novas mensagens de erro.
+ * Criada pra facilitar expansão com possíveis novas mensagens de erro.
  */
 enum Status: int
 {
