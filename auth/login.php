@@ -9,7 +9,10 @@ require_once "$ROOT/err/status.php";
 function bicuda($codigo)
 {
     header("location:/pages/index.php?code=$codigo");
-    die(); // Nesta casa, só usamos die()
+    die();  
+    //   ^
+    // /____\   
+    // | []n|  Nesta casa, só usamos die()           
 }
 
 // Acesso indevido à página
