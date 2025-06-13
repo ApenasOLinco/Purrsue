@@ -16,12 +16,9 @@ require_once "$ROOT/auth/authUtil.php";
             </div>
         </a>
 
-        <?php
-        // Botão de deslogar
-        if (isLogado()) { ?>
+        <!-- Botão de deslogar -->
+        <?php if (isLogado()) : ?>
             <a href="/auth/logout.php">Logout</a>
-            <?php
-        }
-        ?>
+        <?php endif; ?>
     </nav>
 </header>
