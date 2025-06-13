@@ -1,5 +1,8 @@
 <header>
     <nav>
+        <!-- Detalhes da conta -->
+        <input type="checkbox" id="manu-cabecalho-check">
+
         <!-- Logo -->
         <a href="/pages/index.php">
             <div id="header-logo-container">
