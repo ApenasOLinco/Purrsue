@@ -8,47 +8,52 @@ enum Status: int
     /**
      * Tentativa de acesso a uma parte do site sem uma sessão ativa.
      */
-    case NAO_AUTORIZADO = 0;
+    case NAO_AUTORIZADO = 1;
     
     /**
      * Nome de usuário ou senha não coincidem com nenhum registro no banco de dados.
      */
-    case CREDENCIAIS_INVALIDAS = 1;
+    case CREDENCIAIS_INVALIDAS = 2;
 
     /**
      * Tentativa de acesso via GET em uma página POST e vice-versa.
      */
-    case METODO_INVALIDO = 2;
+    case METODO_INVALIDO = 3;
 
     /**
      * Os dados enviados via POST contém campos nulos ou vazios.
      */
-    case FORM_EM_BRANCO = 3;
+    case FORM_EM_BRANCO = 4;
 
     /**
      * Erro inesperado durante a consulta.
      */
-    case ERRO_NA_CONSULTA = 4;
+    case ERRO_NA_CONSULTA = 5;
 
     /**
      * Tentativa de cadastro com um nome de usuário que já existe no banco de dados.
      */
-    case USUARIO_EXISTENTE = 5;
+    case USUARIO_EXISTENTE = 6;
 
     /**
      * Tentativa de cadastro com um e-mail já associado a uma conta no banco de dados
      */
-    case EMAIL_EXISTENTE = 6;
+    case EMAIL_EXISTENTE = 7;
 
     /**
      * Erro inesperado durante a criação de uma conta
      */
-    case ERRO_NA_INSERCAO = 7;
+    case ERRO_NA_INSERCAO = 8;
 
     /**
      * Cadastro realizado com sucesso
      */
-    case CADASTRO_SUCESSO = 8;
+    case CADASTRO_SUCESSO = 9;
+
+    /**
+     * Realização de um Logout
+     */
+    case LOGOUT = 10;
     
     /**
      * Retorna a mensagem associada ao objeto que está chamando essa função.
@@ -65,7 +70,8 @@ enum Status: int
             self::USUARIO_EXISTENTE     => "Esse nome de usuário já está em uso. Tente novamente com outro nome de usuário.",
             self::EMAIL_EXISTENTE       => "Esse endereço de e-mail já está em uso. Tente novamente com outro endereço de e-mail.",
             self::ERRO_NA_INSERCAO      => "Ocorreu um erro ao criar sua conta. Tente novamente em alguns minutos.",
-            self::CADASTRO_SUCESSO      => "Cadastro realizado com sucesso. Você já pode fazer login!"
+            self::CADASTRO_SUCESSO      => "Cadastro realizado com sucesso. Yaaaay!",
+            self::LOGOUT                => "Você fez logout do Purrsue. Já estamos com saudade!",
         };
     }
 }
