@@ -2,6 +2,11 @@
 $ROOT = $_SERVER['DOCUMENT_ROOT'];
 
 require_once "$ROOT/err/status.php";
+require_once "$ROOT/auth/authUtil.php";
+
+// Se o usuário já está logado, redireciona ele pra home.
+session_start();
+if(isLogado()) header("location:/pages/home.php");
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +21,7 @@ require_once "$ROOT/err/status.php";
 <body>
    <?php
    // Cabeçalho (Nav) da página
-   require_once "$ROOT/components/header.html";
+   require_once "$ROOT/components/header.php";
 
    // Tratamento dos códigos de erro enviados via GET
    $codigo = Status::tryFrom($_GET['codigo']);
