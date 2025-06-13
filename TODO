@@ -1,0 +1,19 @@
+3. Cadastro de Itens (Apenas após Login)
+    Após autenticação, o usuário poderá cadastrar itens relacionados ao tema escolhido (ex: livros, filmes, tarefas).
+    Cada item deve ter, pelo menos, um título/nome e uma descrição.
+    Os itens cadastrados devem ser associados ao usuário logado.
+
+4. Exibição dos Itens Cadastrados
+    O sistema deve listar, em uma página, todos os itens cadastrados pelo usuário autenticado.
+    A listagem deve exibir as principais informações do item.
+
+5. Exclusão dos Itens Cadastrados
+    O usuário poderá excluir qualquer item que ele mesmo cadastrou.
+
+6. Validação de Dados
+    Não deve ser possível cadastrar itens com campos obrigatórios em branco.
+    Deve haver mensagens de validação para campos faltantes ou inválidos.
+
+8. Estética e Apresentação Visual
+
+    O sistema deve utilizar CSS ou um framework como Bootstrap para melhorar a apresentação visual e a usabilidade das telas.
