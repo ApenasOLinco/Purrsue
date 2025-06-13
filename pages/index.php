@@ -21,7 +21,7 @@ if(isLogado()) header("location:/pages/home.php");
 <body>
    <?php
    // Cabeçalho (Nav) da página
-   require_once "$ROOT/components/header.php";
+   require_once "$ROOT/components/cabecalho.php";
 
    // Tratamento dos códigos de erro enviados via GET
    $codigo = Status::tryFrom($_GET['codigo']);
