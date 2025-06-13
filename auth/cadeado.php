@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['usuario']) || !isset($_SESSION['senha'])) {
+require_once "$ROOT/auth/authUtil.php";
+
+if(!isLogado()) {
     require_once "$ROOT/err/mandarProIndex.php";
     require_once "$ROOT/err/status.php";
     

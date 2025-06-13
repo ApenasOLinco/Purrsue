@@ -15,3 +15,6 @@ function impedirFormularioEmBranco()
     }
 }
 
+function isLogado() {
+    return isset($_SESSION['usuario']) && isset($_SESSION['senha']);
+}
