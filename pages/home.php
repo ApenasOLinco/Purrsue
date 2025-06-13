@@ -11,6 +11,10 @@ require_once "$ROOT/auth/cadeado.php";
     <title>Purrsue: Home</title>
 </head>
 <body>
+    <?php
+    $ROOT = $_SERVER['DOCUMENT_ROOT'];
+    require_once "$ROOT/components/header.php";
+    ?>
     <a href="/auth/logout.php">Logout</a>
 </body>
 </html>
