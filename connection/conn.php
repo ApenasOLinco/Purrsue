@@ -3,7 +3,7 @@ function conectar_bd()
 {
     $host = "localhost";
     $port = "3307";
-    $banco = "GATOS";
+    $banco = "purrsue";
     $user = "root";
     $senha = "";
 
