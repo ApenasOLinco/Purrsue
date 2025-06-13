@@ -31,6 +31,7 @@ if(isLogado()) header("location:/pages/home.php");
    ?>
 
    <!-- Formulário de Login -->
+   <h3>Entre no Purrsue</h3>
    <form action="/auth/login.php" method="post" id="login-form">
       <label for="usuario">Nome de Usuário:</label>
       <input type="text" name="usuario" id="login-usuario-input">
