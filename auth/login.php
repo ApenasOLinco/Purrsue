@@ -59,4 +59,4 @@ $_SESSION['senha'] = $senha;
 $_SESSION['email'] = $email;
 
 // Redirecionar pra Home
-header('location:/pages/home.php');
+header('location:/pages/Home/home.php');

@@ -6,7 +6,10 @@ require_once "$ROOT/auth/authUtil.php";
 
 // Se o usuário já está logado, redireciona ele pra home.
 session_start();
-if(isLogado()) header("location:/pages/home.php");
+if(isLogado()) {
+   header("location:/pages/Home/home.php");
+   die();
+}
 ?>
 
 <!DOCTYPE html>
