@@ -6,8 +6,11 @@ require_once "$ROOT/auth/authUtil.php";
 
 // Se o usuário já está logado, redireciona ele pra home.
 session_start();
-if(isLogado()) {
-   header("location:/pages/Home/home.php");
+if (isLogado()) {
+   // Redireciona com o código recebido via GET, se aplicável
+   $codigo = Status::tryFrom($_GET['codigo'])?->value;
+
+   header("location:/pages/Home/home.php" . ($codigo === null ? "" : "?codigo=$codigo"));
    die();
 }
 ?>
@@ -23,14 +26,9 @@ if(isLogado()) {
 
 <body>
    <?php
-   // Cabeçalho (Nav) da página
    require_once "$ROOT/components/cabecalho.php";
 
-   // Tratamento dos códigos de erro enviados via GET
-   $codigo = Status::tryFrom($_GET['codigo']);
-   if (isset($codigo)) {
-      echo $codigo->getMensagem();
-   }
+   require_once "$ROOT/components/mensagemDeRedirect.php";
    ?>
 
    <!-- Formulário de Login -->
