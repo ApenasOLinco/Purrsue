@@ -21,7 +21,7 @@ require_once "$ROOT/auth/cadeado.php";
     <h2>CADASTRAR UM GATO</h2>
     <p>Cadastre seu gatinho agora mesmo!</p>
 
-    <form action="/auth/gatos/cadastro.php" method="post" enctype="multipart/form-data">
+    <form action="/auth/gatos/cadastro.php" method="post">
         <label for="gato-nome">Nome do gatinho:</label>
         <input type="text" name="gato-nome" id="input-gato-nome">
 
@@ -37,7 +37,8 @@ require_once "$ROOT/auth/cadeado.php";
         <fieldset id="fotinhos-fieldset">
             <template id="fotinho-input-template">
                 <div class="fotinho-cont">
-                    <input type="file" name="fotinhos[]" accept="image/*">
+                    <label for="fotinhos[]">Link pra fotinho:</label>
+                    <input type="text" name="fotinhos[]">
                     <button type="button">Remover fotinho</button>
                 </div>
             </template>

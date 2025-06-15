@@ -22,8 +22,8 @@ function removerFotinho(/** @type{HTMLInputElement} */ container) {
     const arquivosInput = container.querySelector("input");
     
     // Caso o input de fotinho contenha um arquivo, pede confirmação primeiro
-    if(arquivosInput.files.length > 0) {
-        if(!confirm("Tem certeza que deseja excluir este fotinho?"))
+    if(arquivosInput.value.length > 0) {
+        if(!confirm("Tem certeza que deseja excluir essa foto?"))
             return;
     }
     

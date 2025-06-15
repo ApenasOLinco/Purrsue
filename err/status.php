@@ -54,6 +54,11 @@ enum Status: int
      * Realização de um Logout
      */
     case LOGOUT = 10;
+
+    /**
+     * Provisão de uma URL inválida ao enviar um link via formulário
+     */
+    case URL_INVALIDA = 11;
     
     /**
      * Retorna a mensagem associada ao objeto que está chamando essa função.
@@ -72,6 +77,7 @@ enum Status: int
             self::ERRO_NA_INSERCAO      => "Ocorreu um erro ao fazer o cadastro. Tente novamente em alguns minutos.",
             self::CADASTRO_SUCESSO      => "Cadastro realizado com sucesso. Yaaaay!",
             self::LOGOUT                => "Você fez logout do Purrsue. Já estamos com saudade!",
+            self::URL_INVALIDA          => "Uma URL provida é inválida. Tente novamente com URLs diferentes.",
         };
     }
 }
