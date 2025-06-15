@@ -41,7 +41,7 @@ enum Status: int
     case EMAIL_EXISTENTE = 7;
 
     /**
-     * Erro inesperado durante a criação de uma conta
+     * Erro inesperado durante a criação de uma conta ou no cadastro de um gato
      */
     case ERRO_NA_INSERCAO = 8;
 
@@ -69,7 +69,7 @@ enum Status: int
             self::ERRO_NA_CONSULTA      => "Ocorreu um erro ao verificar seus dados. Tente novamente em alguns minutos.",
             self::USUARIO_EXISTENTE     => "Esse nome de usuário já está em uso. Tente novamente com outro nome de usuário.",
             self::EMAIL_EXISTENTE       => "Esse endereço de e-mail já está em uso. Tente novamente com outro endereço de e-mail.",
-            self::ERRO_NA_INSERCAO      => "Ocorreu um erro ao criar sua conta. Tente novamente em alguns minutos.",
+            self::ERRO_NA_INSERCAO      => "Ocorreu um erro ao fazer o cadastro. Tente novamente em alguns minutos.",
             self::CADASTRO_SUCESSO      => "Cadastro realizado com sucesso. Yaaaay!",
             self::LOGOUT                => "Você fez logout do Purrsue. Já estamos com saudade!",
         };
