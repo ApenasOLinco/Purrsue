@@ -35,13 +35,16 @@ require_once "$ROOT/auth/cadeado.php";
         <h4>Mostra ele pra gente?</h4>
         <button type="button" id="btn-adicionar-fotinho" onclick="adicionarFotinho()">Adicionar fotinho</button>
         <fieldset id="fotinhos-fieldset">
+
             <template id="fotinho-input-template">
                 <div class="fotinho-cont">
                     <label for="fotinhos[]">Link pra fotinho:</label>
                     <input type="text" name="fotinhos[]">
+
                     <button type="button">Remover fotinho</button>
                 </div>
             </template>
+
         </fieldset>
 
         <button id="btn-enviar" type="submit">Enviar gatinho!!</button>
