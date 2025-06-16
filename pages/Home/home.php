@@ -15,7 +15,7 @@ require_once "$ROOT/auth/cadeado.php";
 </head>
 
 <body>
-    <?php $ROOT = $_SERVER['DOCUMENT_ROOT'];
+    <?php
     require_once "$ROOT/components/cabecalho.php";
     require_once "$ROOT/components/mensagemDeRedirect.php";
     ?>
