@@ -1,7 +1,7 @@
 /**
  * Arquivo global de estilos, com estilos base para todos os elementos do site.
  * 
- * Algumas páginas ou componentes sobrescrevem esses estilos
+ * Algumas páginas sobrescrevem esses estilos
  */
 
 * {
@@ -41,6 +41,35 @@ p.subtitulo {
     margin: -1rem 0 1rem;
 }
 
+header {
+    margin: 1rem;
+    
+    & nav {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    & a {
+        padding: .5rem;
+
+        border: 2px solid black;
+        border-radius: .5rem;
+        
+        text-decoration: none;
+
+        transition: transform .2s ease, box-shadow .2s ease;
+
+        &:visited {
+            color: unset;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 1px 2px 2px black;
+        }
+    }
+}
+
 form {
     width: 50%;
 
@@ -51,6 +80,8 @@ form {
     border-radius: 10px;
 
     box-shadow: 2px 3px 3px black;
+
+    transition: height 1s ease;
 }
 
 input[type="text"],
@@ -79,7 +110,7 @@ button {
 
     &:hover {
         cursor: pointer;
-        color:rgb(252, 252, 66);
+        color: rgb(252, 252, 66);
     }
 
     &:active {
@@ -125,7 +156,7 @@ form textarea {
 }
 
 .redirect-mensagem {
-    position: absolute;
+    position: fixed;
 
     left: 50%;
     bottom: 15px;
@@ -147,7 +178,7 @@ form textarea {
     transform-origin: center;
     animation:
         redirect-popup .5s forwards cubic-bezier(0.455, 0.03, 0.515, 0.955),
-        vanish 2s 15s forwards cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        vanish 2s 5s forwards cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
     &::before {
         content: '!';
@@ -163,6 +194,10 @@ form textarea {
 
         color: black;
         background-color: yellow;
+    }
+
+    &:hover {
+        background-color: blueviolet;
     }
 }
 
@@ -181,5 +216,7 @@ form textarea {
 @keyframes vanish {
     100% {
         opacity: 0;
+        visibility: hidden;
+        display: none;
     }
 }
