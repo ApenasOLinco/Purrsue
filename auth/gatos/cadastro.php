@@ -38,7 +38,7 @@ $nome = $_POST['gato-nome'];
 $descricao = $_POST['gato-descricao'];
 $raca = $_POST['gato-raca'];
 
-$query = "INSERT INTO _gatos (nome, descricao, raca) VALUES (?, ?, ?)";
+$query = "INSERT INTO _gatos (usuario_id, nome, descricao, raca) VALUES (?, ?, ?, ?)";
 $stmt = mysqli_prepare($conn, $query);
 
 if (!$stmt) {
@@ -46,7 +46,7 @@ if (!$stmt) {
     cancelarCadastro($codigo, $conn);
 }
 
-mysqli_stmt_bind_param($stmt, "sss", $nome, $descricao, $raca);
+mysqli_stmt_bind_param($stmt, "isss", $_SESSION['id'], $nome, $descricao, $raca);
 
 if (!mysqli_execute($stmt)) {
     $codigo = Status::ERRO_NA_INSERCAO;
@@ -67,6 +67,12 @@ if (!$fotinhos or count($fotinhos) < 1) {
 
 // Insert de todas as fotos enviadas no banco de dados
 for ($i = 0; $i < count($fotinhos); $i++) {
+    // URL muito grande
+    if (count($fotinhos) > 300) {
+        $codigo = Status::URL_INVALIDA;
+        cancelarCadastro($codigo, $conn);
+    }
+
     $url = $fotinhos[$i];
     
     // Verificar o link é válido e se tem o MIME type correto (deve ser image/*)
