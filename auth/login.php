@@ -2,7 +2,7 @@
 $ROOT = $_SERVER['DOCUMENT_ROOT'];
 
 require_once "$ROOT/err/status.php";
-require_once "$ROOT/err/mandarProIndex.php";
+require_once "$ROOT/err/redirecionar.php";
 require_once "authUtil.php";
 
 impedirAcessoIndevido();

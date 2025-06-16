@@ -5,17 +5,19 @@ error_reporting(E_ALL);
 
 $ROOT = $_SERVER['DOCUMENT_ROOT'];
 require_once "$ROOT/err/status.php";
-require_once "$ROOT/err/mandarProIndex.php";
+require_once "$ROOT/err/redirecionar.php";
 require_once "$ROOT/auth/authUtil.php";
+
+const REDIRECIONAR_PARA = "/pages/CadastrarGato/cadastrarGato.php";
 
 // Restringe acesso a somente usuários logados
 if (!isLogado()) {
     $codigo = Status::NAO_AUTORIZADO;
-    bicuda($codigo);
+    bicuda($codigo, REDIRECIONAR_PARA);
 }
 
-impedirAcessoIndevido();
-impedirFormularioEmBranco();
+impedirAcessoIndevido(REDIRECIONAR_PARA);
+impedirFormularioEmBranco(REDIRECIONAR_PARA);
 
 require_once "$ROOT/connection/conn.php";
 
@@ -28,7 +30,7 @@ function cancelarCadastro(Status $codigo, mysqli $conn)
 {
     mysqli_rollback($conn);
     mysqli_close($conn);
-    bicuda($codigo);
+    bicuda($codigo, REDIRECIONAR_PARA);
 }
 
 // Propriedades do gato

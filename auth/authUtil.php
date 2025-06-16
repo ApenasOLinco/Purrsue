@@ -1,17 +1,17 @@
 <?php
-function impedirAcessoIndevido()
+function impedirAcessoIndevido($redirecionarPara = "/pages/index.php")
 {
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
         $codigo = Status::METODO_INVALIDO;
-        bicuda($codigo);
+        bicuda($codigo, $redirecionarPara);
     }
 }
 
-function impedirFormularioEmBranco()
+function impedirFormularioEmBranco($redirecionarPara = "/pages/index.php")
 {
     if (in_array(null, $_POST)) {
         $codigo = Status::FORM_EM_BRANCO;
-        bicuda($codigo);
+        bicuda($codigo, $redirecionarPara);
     }
 }
 
