@@ -44,6 +44,9 @@ p.subtitulo {
 header {
     margin: 1rem;
 
+    padding: 0 0 1rem;
+    border-bottom: 2px dashed rgb(167, 167, 167);
+
     & nav {
         display: flex;
         justify-content: space-around;
