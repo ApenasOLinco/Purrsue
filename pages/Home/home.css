@@ -6,6 +6,7 @@ table {
     & th {
         position: sticky;
         top: 0;
+        z-index: 2;
         
         font-weight: bolder;
 
@@ -29,14 +30,16 @@ table {
     }
 
     & tbody tr {
-        transition: transform .1s ease;
+        transition: transform .1s ease, box-shadow .1s ease, background-color .1s linear;
 
         &:hover {
             background-color: rgb(247, 199, 247);
             position: relative;
-            transform: scale(1.01);
+            transform: scale(1.005);
 
-            outline: 1px solid black;
+            /* outline: 1px solid black; */
+
+            box-shadow: 2px 2px 3px;
         }
     }
 }
