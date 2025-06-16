@@ -5,6 +5,6 @@ require_once "$ROOT/err/status.php";
 $codigo = Status::tryFrom($_GET['codigo']);
 if (isset($codigo)): ?>
 
-    <h4><?= $codigo->getMensagem() ?></h4>
+    <h4 class="redirect-mensagem"><?= $codigo->getMensagem() ?></h4>
     
 <?php endif; ?>
