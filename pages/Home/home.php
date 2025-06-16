@@ -27,7 +27,7 @@ require_once "$ROOT/auth/cadeado.php";
     $conn = conectar_bd();
 
     $usuario_id = $_SESSION['id'];
-    $query = "SELECT * FROM _gatos";
+    $query = "SELECT * FROM _gatos WHERE usuario_id = $usuario_id";
     $resultado = mysqli_query($conn, $query);
 
     if (!$resultado) {
@@ -36,9 +36,9 @@ require_once "$ROOT/auth/cadeado.php";
     }
 
     // Nenhum gato cadastrado :(
-    if (mysqli_num_rows($resultado) < 1) {
-        die("<h3>Quê???? Você ainda não cadastrou NENHUM gato?? D:</h3>");
-    }
+    if (mysqli_num_rows($resultado) < 1): ?>
+        <h3 id="como-assim-h3">Quê?? Você ainda não cadastrou NENHUM GATO? D:</h3>
+    <?php die(); endif;
 
     ?>
     <!-- Estrutura da tabela -->
@@ -63,7 +63,7 @@ require_once "$ROOT/auth/cadeado.php";
                     <td><?= $gato['descricao'] ?></td>
 
                     <td>
-                        <a class="tabela-acao" href="/auth/gatos/excluir.php?<?= $gato['id'] ?>">Excluir</a>
+                        <a class="tabela-acao excluir" href="/auth/gatos/excluir.php?<?= $gato['id'] ?>">Excluir</a>
                     </td>
                 </tr>
             <?php endwhile; ?>
