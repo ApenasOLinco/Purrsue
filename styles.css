@@ -46,14 +46,16 @@ form {
 
     padding: 1ch;
     margin: auto;
-    
+
     border: 1px solid black;
     border-radius: 10px;
 
     box-shadow: 2px 3px 3px black;
 }
 
-input[type="text"], input[type="password"], textarea {
+input[type="text"],
+input[type="password"],
+textarea {
     border: 1px solid black;
     border-radius: 8px;
 
@@ -68,7 +70,7 @@ button {
     height: 2rem;
 
     font-weight: bold;
-    
+
     color: white;
     background-color: rgb(124, 35, 134);
 
@@ -87,7 +89,7 @@ form textarea {
     justify-content: space-between;
     align-items: center;
     gap: 1ch;
-    
+
     padding: .5ch;
 
     width: 100%;
@@ -96,15 +98,19 @@ form textarea {
 
     border: none;
     border-bottom: 2px rgb(124, 124, 124) dashed;
-}
 
-.conjunto-fieldset > :is(input, textarea) {
-    display: block;
+    &:last-of-type {
+        border-bottom: none;
+    }
 
-    flex-grow: 1;
-}
+    & label {
+        text-align: right;
+        max-width: 30%;
+    }
 
-.conjunto-fieldset > label {
-    text-align: right;
-    max-width: 30%;
+    &> :is(input, textarea) {
+        display: block;
+
+        flex-grow: 1;
+    }
 }

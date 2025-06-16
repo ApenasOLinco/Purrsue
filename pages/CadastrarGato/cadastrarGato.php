@@ -10,6 +10,7 @@ require_once "$ROOT/auth/cadeado.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once "$ROOT/components/importarCSS.php" ?>
+    <link rel="stylesheet" href="cadastrarGato.css">
     <title>Cadastrar Gato!</title>
 </head>
 
@@ -57,5 +58,7 @@ require_once "$ROOT/auth/cadeado.php";
         <button id="btn-enviar" type="submit">Enviar gatinho!!</button>
     </form>
 </body>
+
+<script src="cadastrarGato.js"></script>
 
 </html>
