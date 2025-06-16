@@ -43,34 +43,33 @@ require_once "$ROOT/auth/cadeado.php";
     ?>
     <!-- Estrutura da tabela -->
     <table>
-        <thead>
-            <tr>
+        <tr>
+            <thead>
                 <th>Nome</th>
                 <th>Raça</th>
                 <th>Descrição</th>
-            </tr>
-        </thead>
-        <?php
+                <th>Ações</th>
+            </thead>
+        </tr>
 
-        // Gatos
-        while ($gato = mysqli_fetch_assoc($resultado)): ?>
-            <tr>
-                <td>
-                    <?= $gato['nome'] ?>
-                </td>
+        <tbody>
+            <?php // Gatos
+            while ($gato = mysqli_fetch_assoc($resultado)): ?>
+                <tr>
+                    <td><?= $gato['nome'] ?></td>
 
-                <td>
-                    <?= $gato['raca'] ?>
-                </td>
+                    <td><?= $gato['raca'] ?></td>
 
-                <td>
-                    <?= $gato['descricao'] ?>
-                </td>
-            </tr>
-        <?php endwhile;
+                    <td><?= $gato['descricao'] ?></td>
 
-        mysqli_close($conn);
-        ?>
+                    <td>
+                        <a class="tabela-acao" href="/auth/gatos/excluir.php?<?= $gato['id'] ?>">Excluir</a>
+                    </td>
+                </tr>
+            <?php endwhile; ?>
+        </tbody>
+
+        <?php mysqli_close($conn); ?>
 
     </table>
     <script src="home.js"></script>

@@ -43,18 +43,18 @@ p.subtitulo {
 
 header {
     margin: 1rem;
-    
+
     & nav {
         display: flex;
         justify-content: space-around;
     }
-    
+
     & a {
         padding: .5rem;
 
         border: 2px solid black;
         border-radius: .5rem;
-        
+
         text-decoration: none;
 
         transition: transform .2s ease, box-shadow .2s ease;
@@ -97,8 +97,7 @@ button {
     display: block;
     margin: auto;
 
-    width: 25%;
-    height: 2rem;
+    padding: .8ch;
 
     font-weight: bold;
 
@@ -122,6 +121,45 @@ form textarea {
     min-height: calc(.5ch + 2lh);
     height: calc(.5ch + 4lh);
     resize: vertical;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    border: 2px solid black;
+
+    & th {
+        font-weight: bolder;
+
+        border: 2px solid black;
+
+        color: white;
+        background-color: rgb(124, 35, 134);
+    }
+
+    & td {
+        border: dotted black;
+        border-width: 0 0 2px 0;
+    }
+
+    & td,
+    th {
+        text-align: center;
+        vertical-align: middle;
+        padding: .5rem 1rem;
+    }
+
+    & tbody tr {
+        transition: transform .1s ease;
+
+        &:hover {
+            background-color: rgb(247, 199, 247);
+            position: relative;
+            transform: scale(1.01);
+
+            outline: 1px solid black;
+        }
+    }
 }
 
 .conjunto-fieldset {
