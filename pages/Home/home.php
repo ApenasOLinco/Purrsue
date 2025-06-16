@@ -20,6 +20,9 @@ require_once "$ROOT/auth/cadeado.php";
     require_once "$ROOT/components/mensagemDeRedirect.php";
     ?>
 
+    <h2>SEUS GATOS</h2>
+    <p class="subtitulo">Os bixanos que você cadastrou</p>
+
     <?php // Mostrar todos os gatos cadastrados
     require_once "$ROOT/connection/conn.php";
     require_once "$ROOT/auth/authUtil.php";
