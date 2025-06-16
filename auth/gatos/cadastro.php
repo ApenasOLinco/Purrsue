@@ -57,8 +57,6 @@ $id = mysqli_insert_id($conn);
 
 $fotinhos = $_POST['fotinhos'];
 
-print_r($fotinhos);
-
 // Verificar se foi enviada ao menos uma foto
 if (!$fotinhos or count($fotinhos) < 1) {
     $codigo = Status::FORM_EM_BRANCO;
@@ -67,13 +65,13 @@ if (!$fotinhos or count($fotinhos) < 1) {
 
 // Insert de todas as fotos enviadas no banco de dados
 for ($i = 0; $i < count($fotinhos); $i++) {
+    $url = $fotinhos[$i];
+
     // URL muito grande
-    if (count($fotinhos) > 300) {
+    if (strlen($url) > 300) {
         $codigo = Status::URL_INVALIDA;
         cancelarCadastro($codigo, $conn);
     }
-
-    $url = $fotinhos[$i];
     
     // Verificar o link é válido e se tem o MIME type correto (deve ser image/*)
     $headers = @get_headers($url, true);
