@@ -21,6 +21,7 @@ if (isLogado()) {
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <?php require_once "$ROOT/components/importarCSS.php" ?>
    <title>Document</title>
 </head>
 
@@ -32,29 +33,39 @@ if (isLogado()) {
    ?>
 
    <!-- Formulário de Login -->
-   <h3>Entre no Purrsue</h3>
+   <h2>Entre no Purrsue</h2>
    <form action="/auth/login.php" method="post" id="login-form">
-      <label for="usuario">Nome de Usuário:</label>
-      <input type="text" name="usuario" id="login-usuario-input">
+      <fieldset class="conjunto-fieldset">
+         <label for="usuario">Nome de Usuário:</label>
+         <input type="text" name="usuario" id="login-usuario-input">
+      </fieldset>
 
-      <label for="senha">Senha:</label>
-      <input type="password" name="senha" id="login-senha-input">
+      <fieldset class="conjunto-fieldset">
+         <label for="senha">Senha:</label>
+         <input type="password" name="senha" id="login-senha-input">
+      </fieldset>
 
-      <input type="submit" value="Entrar!">
+      <button type="submit">Entrar!</button>
    </form>
 
-   <h3 class="nao-tem-conta-call">Ainda não tem conta?? Crie uma!</h3>
+   <h2 class="nao-tem-conta-call">Ainda não tem conta?? Crie uma!</h2>
    <form action="/auth/cadastro.php" method="post" id="cadastro-form">
-      <label for="usuario">Nome de Usuário:</label>
-      <input type="text" name="usuario" id="cadastro-usuario-input">
+      <fieldset class="conjunto-fieldset">
+         <label for="usuario">Nome de Usuário:</label>
+         <input type="text" name="usuario" id="cadastro-usuario-input">
+      </fieldset>
 
-      <label for="senha">Senha:</label>
-      <input type="password" name="senha" id="cadastro-senha-input">
+      <fieldset class="conjunto-fieldset">
+         <label for="senha">Senha:</label>
+         <input type="password" name="senha" id="cadastro-senha-input">
+      </fieldset>
 
-      <label for="cadastro-email-input">E-Mail:</label>
-      <input type="email" name="email" id="cadastro-email-input">
+      <fieldset class="conjunto-fieldset">
+         <label for="email">E-Mail:</label>
+         <input type="text" name="email" id="cadastro-email-input">
+      </fieldset>
 
-      <input type="submit" value="Criar conta!">
+      <button type="submit">Criar conta!!!</button>
    </form>
 </body>
 

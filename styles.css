@@ -1,0 +1,110 @@
+/**
+ * Arquivo global de estilos, com estilos base para todos os elementos do site.
+ * 
+ * Algumas páginas ou componentes sobrescrevem esses estilos
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* Fonte */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Debug */
+    /* border: 1px solid red; */
+}
+
+body {
+    padding: .5ch;
+}
+
+h1 {
+    margin: 1rem;
+}
+
+h2 {
+    text-align: center;
+    margin: .8rem;
+    font-size: 30px;
+}
+
+h4 {
+    text-align: center;
+
+    margin: 0 0 .6rem;
+}
+
+p.subtitulo {
+    text-align: center;
+    margin: -1rem 0 1rem;
+}
+
+form {
+    width: 50%;
+
+    padding: 1ch;
+    margin: auto;
+    
+    border: 1px solid black;
+    border-radius: 10px;
+
+    box-shadow: 2px 3px 3px black;
+}
+
+input[type="text"], input[type="password"], textarea {
+    border: 1px solid black;
+    border-radius: 8px;
+
+    padding: .2rem;
+}
+
+button {
+    display: block;
+    margin: auto;
+
+    width: 25%;
+    height: 2rem;
+
+    font-weight: bold;
+    
+    color: white;
+    background-color: rgb(124, 35, 134);
+
+    border-radius: 20px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+form textarea {
+    min-height: calc(.5ch + 2lh);
+    height: calc(.5ch + 4lh);
+    resize: vertical;
+}
+
+.conjunto-fieldset {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1ch;
+    
+    padding: .5ch;
+
+    width: 100%;
+    margin: 0 auto .5rem;
+    padding-bottom: 1rem;
+
+    border: none;
+    border-bottom: 2px rgb(124, 124, 124) dashed;
+}
+
+.conjunto-fieldset > :is(input, textarea) {
+    display: block;
+
+    flex-grow: 1;
+}
+
+.conjunto-fieldset > label {
+    text-align: right;
+    max-width: 30%;
+}
