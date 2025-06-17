@@ -69,6 +69,16 @@ enum Status: int
      * Exclusão de um gato realizada com suceso
      */
     case EXCLUSAO_SUCESSO = 13;
+
+    /**
+     * Erro inesperado ao editar um gato
+     */
+    case ERRO_NA_EDICAO = 14;
+    
+    /**
+     * Edição de gato realizada com sucesso
+     */
+    case EDICAO_SUCESSO = 15;
     
     /**
      * Retorna a mensagem associada ao objeto que está chamando essa função.
@@ -90,6 +100,8 @@ enum Status: int
             self::URL_INVALIDA          => "Uma URL provida é inválida. Tente novamente com URLs diferentes.",
             self::ERRO_NA_EXCLUSAO      => "Ocorreu um erro ao excluir o gato. Tente novamente em alguns minutos",
             self::EXCLUSAO_SUCESSO      => "Exclusão do gato bem-sucedida. Tadinho! :(",
+            self::ERRO_NA_EDICAO        => "Ocorreu um erro ao editar o gato. Tente novamente em alguns minutos",
+            self::EDICAO_SUCESSO        => "Edição do gato bem sucedida!",
         };
     }
 }
