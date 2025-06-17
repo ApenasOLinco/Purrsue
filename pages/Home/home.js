@@ -6,7 +6,3 @@ function excluirGato(id) {
         window.location.assign(`/auth/gatos/excluir.php?id=${id}`);
     }
 }
-
-document.querySelectorAll('.excluir').forEach(btn => {
-    btn.addEventListener('click', excluirGato);
-});
