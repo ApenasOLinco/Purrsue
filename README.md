@@ -37,14 +37,30 @@ Com o Purrsue, você pode cadastrar informações sobre seus gatinhos favoritos 
 
     Ao terminar de clonar o repositório, seus arquivos se parecerão com isso:
 
-    ✅ **Correto:**
+    ~ ✅ **Correto:**
 
     ![Modelo correto](/Readme/02%20-%20Modelo%20correto%20do%20repositório.png)
-
+    
     Todos os arquivos diretamente na pasta htdocs.
 
-    ❌ **Incorreto**:
+    ~ ❌ **Incorreto**:
 
     ![Modelo incorreto](/Readme/03%20-%20Modelo%20incorreto%20do%20repositório.png)
 
     Os arquivos foram clonados para uma dentro de htdocs.
+
+Considerando que seus arquivos estejam como na imagem do exemplo correto, você está livre para iniciar o web server e o phpmyadmin!
+
+### Importando o banco de dados
+
+1. Com o seu phpmyadmin rodando e aberto no browser, vá para a aba "Import", mostrada na imagem:
+
+    ![Botão de import](/Readme/04%20-%20Botão%20de%20import.png)
+
+2. Clique no botão "Browse" (ou Navegar/Procurar):
+
+    ![Botão Browse](/Readme/05%20-%20Botão%20Browse.png)
+
+3. Navegue até seu htdocs, onde você clonou o repositório, e selecione o arquivo "purrsue.sql":
+
+    ![purrsue.sql](/Readme/06%20-%20purrsue.sql.png)
