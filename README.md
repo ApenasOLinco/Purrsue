@@ -64,3 +64,9 @@ Considerando que seus arquivos estejam como na imagem do exemplo correto, você 
 3. Navegue até seu htdocs, onde você clonou o repositório, e selecione o arquivo "purrsue.sql":
 
     ![purrsue.sql](/Readme/06%20-%20purrsue.sql.png)
+
+4. Depois de selecionar o arquivo purrsue.sql, navegue até o final da página e clique no botão para importar:
+
+    ![Botão para importar](Readme/07%20-%20Rodar%20sql.png)
+
+Pronto! O banco de dados estará criado no seu servidor local.
