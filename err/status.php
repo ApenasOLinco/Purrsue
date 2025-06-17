@@ -6,32 +6,32 @@
 enum Status: int
 {
     /**
-     * Tentativa de acesso a uma parte do site sem uma sessão ativa.
+     * Tentativa de acesso a uma parte do site sem permissão correta
      */
     case NAO_AUTORIZADO = 1;
     
     /**
-     * Nome de usuário ou senha não coincidem com nenhum registro no banco de dados.
+     * Nome de usuário ou senha não coincidem com nenhum registro no banco de dados
      */
     case CREDENCIAIS_INVALIDAS = 2;
 
     /**
-     * Tentativa de acesso via GET em uma página POST e vice-versa.
+     * Tentativa de acesso via GET em uma página POST e vice-versa
      */
     case METODO_INVALIDO = 3;
 
     /**
-     * Os dados enviados via POST contém campos nulos ou vazios.
+     * Os dados enviados via POST contém campos nulos ou vazios
      */
     case FORM_EM_BRANCO = 4;
 
     /**
-     * Erro inesperado durante a consulta.
+     * Erro inesperado durante a consulta
      */
     case ERRO_NA_CONSULTA = 5;
 
     /**
-     * Tentativa de cadastro com um nome de usuário que já existe no banco de dados.
+     * Tentativa de cadastro com um nome de usuário que já existe no banco de dados
      */
     case USUARIO_EXISTENTE = 6;
 
@@ -59,6 +59,16 @@ enum Status: int
      * Provisão de uma URL inválida ao enviar um link via formulário
      */
     case URL_INVALIDA = 11;
+
+    /**
+     * Erro inesperado durante a exclusão de um gato
+     */
+    case ERRO_NA_EXCLUSAO = 12;
+
+    /**
+     * Exclusão de um gato realizada com suceso
+     */
+    case EXCLUSAO_SUCESSO = 13;
     
     /**
      * Retorna a mensagem associada ao objeto que está chamando essa função.
@@ -67,7 +77,7 @@ enum Status: int
     public function getMensagem(): string
     {
         return match ($this) {
-            self::NAO_AUTORIZADO        => "Você não tem acesso suficiente para ver essa parte do site. Entre em sua conta e tente novamente.",
+            self::NAO_AUTORIZADO        => "Você não tem acesso suficiente para ver essa parte do site. Entre em uma conta válida e tente novamente.",
             self::CREDENCIAIS_INVALIDAS => "Credenciais inválidas. Entre com uma conta existente.",
             self::METODO_INVALIDO       => "Método Inválido. Esse recurso não pode ser acessado dessa forma.",
             self::FORM_EM_BRANCO        => "Formulário em Branco. Preencha todos os campos do formulário.",
@@ -78,6 +88,8 @@ enum Status: int
             self::CADASTRO_SUCESSO      => "Cadastro realizado com sucesso. Yaaaay!",
             self::LOGOUT                => "Você fez logout do Purrsue. Já estamos com saudade!",
             self::URL_INVALIDA          => "Uma URL provida é inválida. Tente novamente com URLs diferentes.",
+            self::ERRO_NA_EXCLUSAO      => "Ocorreu um erro ao excluir o gato. Tente novamente em alguns minutos",
+            self::EXCLUSAO_SUCESSO      => "Exclusão do gato bem-sucedida. Tadinho! :(",
         };
     }
 }

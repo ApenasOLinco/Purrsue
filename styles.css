@@ -159,6 +159,7 @@ form textarea {
 
 .redirect-mensagem {
     position: fixed;
+    z-index: 3;
 
     left: 50%;
     bottom: 15px;

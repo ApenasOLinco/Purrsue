@@ -100,9 +100,9 @@ require_once "$ROOT/auth/cadeado.php";
                     <td><?= $gato['raca'] ?></td>
                     <td><?= $gato['descricao'] ?></td>
                     <td>
-                        <a class="tabela-acao excluir" href="/auth/gatos/excluir.php?<?= $gato['id'] ?>">
-                            <button>Excluir</button>
-                        </a>
+                        <button onclick="excluirGato(<?= $gato['id'] ?>)" class="excluir">
+                            Excluir
+                        </button>
 
                         <button popovertarget="fotinho<?= $gato['id'] ?>">Ver fotos!!</button>
                     </td>
