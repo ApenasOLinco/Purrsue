@@ -39,20 +39,8 @@ require_once "$ROOT/auth/cadeado.php";
             <input type="text" name="gato-raca" id="input-gato-raca">
         </fieldset>
 
-        <h4>Mostra ele pra gente?</h4>
-        <button type="button" id="btn-adicionar-fotinho" onclick="adicionarFotinho()">Adicionar fotinho</button>
-        <fieldset id="fotinhos-fieldset">
-
-            <template id="fotinho-input-template">
-                <fieldset class="fotinho-cont conjunto-fieldset">
-                    <label for="fotinhos[]">Link pra fotinho:</label>
-                    <input type="text" name="fotinhos[]">
-
-                    <button type="button">Remover fotinho</button>
-                </fieldset>
-            </template>
-
-        </fieldset>
+        <h4>Quer adicionar mais fotinhos?</h4>
+        <?php require_once "$ROOT/components/FormFotinhos/formFotinhos.php" ?>
     </form>
 </body>
 
