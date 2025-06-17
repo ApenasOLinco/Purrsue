@@ -14,15 +14,20 @@ $descricao = $_POST['gato-descricao'];
 $raca = $_POST['gato-raca'];
 $fotinhos = $_POST['fotinhos'];
 
-// Se ocorrer um redirecionamento, será para essa página:
-
 function cancelarCadastro(Status $codigo, mysqli $conn)
 {
     $REDIRECIONAR_PARA = "/pages/EditarGato/editarGato.php?id=" . $_POST['gato-id'];
     mysqli_rollback($conn);
     mysqli_close($conn);
-    die();
-    // bicuda($codigo, $REDIRECIONAR_PARA);
+    bicuda($codigo, $REDIRECIONAR_PARA);
+}
+
+// Verificar se o gato tem o mesmo usuario_id que o usuario atual
+$dono_do_gato = mysqli_query($conn, "SELECT usuario_id FROM _gatos WHERE id = $id")->fetch_assoc()['usuario_id'];
+
+if ($dono_do_gato != $_SESSION['id']) {
+    $codigo = Status::NAO_AUTORIZADO;
+    cancelarCadastro($codigo,$conn);
 }
 
 // Montar a query de acordo com os dados enviados

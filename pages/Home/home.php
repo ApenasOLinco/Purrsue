@@ -104,6 +104,8 @@ require_once "$ROOT/auth/cadeado.php";
                             Excluir
                         </button>
 
+                        <button onclick="editarGato(<?= $gato['id'] ?>)">Editar</button>
+                        
                         <button popovertarget="fotinho<?= $gato['id'] ?>">Ver fotos!!</button>
                     </td>
                 </tr>

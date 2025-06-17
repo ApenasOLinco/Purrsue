@@ -39,6 +39,10 @@ require_once "$ROOT/auth/cadeado.php";
 
     $conn->close();
 
+    if ($gato['usuario_id'] !== $_SESSION['id']): ?>
+        <h4>Ops! Esse gato não é seu, bobinho!</h4>
+        <?php die();
+    endif;
     ?>
 
     <h2>Editar gato</h2>

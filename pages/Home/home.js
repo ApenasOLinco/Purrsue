@@ -6,3 +6,7 @@ function excluirGato(id) {
         window.location.assign(`/auth/gatos/excluir.php?id=${id}`);
     }
 }
+
+function editarGato(id) {
+    window.location.assign(`/pages/EditarGato/editarGato.php?id=${id}`);
+}

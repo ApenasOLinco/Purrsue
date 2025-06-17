@@ -43,7 +43,7 @@ table {
         }
     }
 
-    & .excluir {
+    & button:not(:last-of-type) {
         text-decoration: none;
         display: inline-block;
         margin: 0 0 10px 0;
