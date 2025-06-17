@@ -10,16 +10,16 @@ Pessoalmente - e antes de mais nada - quero _agradecer ao professor Jason_ por n
 
 Com o Purrsue, você pode cadastrar informações sobre seus gatinhos favoritos e deixar o sistema cuidar da parte complicada. Você só precisa logar, cadastrar seu bichano e pronto! Ele fica disponível para consulta até segunda ordem.
 
-## 3. Rodar na sua máquina
+## 4. Rodar na sua máquina
 
-### 3.1 Requisitos
+### 4.1 Requisitos
 
 - Xampp;
 - PHP;
     - Preferencialmente, use 8.1, pois não estou familiarizado com as nuances entre as versões do PHP até o momento da escrita desse README.
 - Mais ou menos meia dúzia de boas fotos de gatos...
 
-### 3.2 Clonando o repositório
+### 4.2 Clonando o repositório
 
 1. Na sua linha de comando, viaje para a pasta htdocs do xampp:
 
@@ -51,7 +51,7 @@ Com o Purrsue, você pode cadastrar informações sobre seus gatinhos favoritos 
 
 Considerando que seus arquivos estejam como na imagem do exemplo correto, você está livre para iniciar o web server e o phpmyadmin!
 
-### Importando o banco de dados
+### 4.3 Importando o banco de dados
 
 1. Com o seu phpmyadmin rodando e aberto no browser, vá para a aba "Import", mostrada na imagem:
 
@@ -70,3 +70,17 @@ Considerando que seus arquivos estejam como na imagem do exemplo correto, você 
     ![Botão para importar](Readme/07%20-%20Rodar%20sql.png)
 
 Pronto! O banco de dados estará criado no seu servidor local.
+
+## 5. Contas de teste
+
+Foram criadas duas contas de teste para facilitar o processo de avaliação: uma _com muitos gatos_ cadastrados, e uma _sem gatos_.
+
+### Conta com gatos
+- Usuário: LINCO
+- Senha: linco123
+
+### Conta sem gatos
+- Usuário: NLINCO
+- Senha: linco321
+
+Eu deixei umas fotos que achei engraçadas de gatinhos na conta com gatos, então aproveite com moderação :)
