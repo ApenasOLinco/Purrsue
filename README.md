@@ -24,7 +24,7 @@ Espero que goste!
 
 - Xampp;
 - PHP;
-    - Preferencialmente, use 8.1, pois não estou familiarizado com as nuances entre as versões do PHP até o momento da escrita desse README.
+    - Use a partir da versão 8.1! Enums são usados no código, e eles foram adicionados nessa versão.
 - Mais ou menos meia dúzia de boas fotos de gatos...
 
 ### 4.2 Clonando o repositório
