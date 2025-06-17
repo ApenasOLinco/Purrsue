@@ -4,7 +4,7 @@
     <template id="fotinho-input-template">
         <fieldset class="fotinho-cont conjunto-fieldset">
             <label for="fotinhos[]">Link pra fotinho:</label>
-            <input type="text" name="fotinhos[]">
+            <input type="text" name="fotinhos[]" required>
 
             <button type="button">Remover fotinho</button>
         </fieldset>
