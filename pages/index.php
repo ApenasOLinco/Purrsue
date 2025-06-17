@@ -34,15 +34,16 @@ if (isLogado()) {
 
    <!-- Formulário de Login -->
    <h2>Entre no Purrsue</h2>
+   <h4>Seu site para compartilhar o amor por gatinhos!</h4>
    <form action="/auth/login.php" method="post" id="login-form">
       <fieldset class="conjunto-fieldset">
          <label for="usuario">Nome de Usuário:</label>
-         <input type="text" name="usuario" id="login-usuario-input">
+         <input type="text" name="usuario" id="login-usuario-input" required>
       </fieldset>
 
       <fieldset class="conjunto-fieldset">
          <label for="senha">Senha:</label>
-         <input type="password" name="senha" id="login-senha-input">
+         <input type="password" name="senha" id="login-senha-input" required>
       </fieldset>
 
       <button type="submit">Entrar!</button>
@@ -52,17 +53,17 @@ if (isLogado()) {
    <form action="/auth/cadastro.php" method="post" id="cadastro-form">
       <fieldset class="conjunto-fieldset">
          <label for="usuario">Nome de Usuário:</label>
-         <input type="text" name="usuario" id="cadastro-usuario-input">
+         <input type="text" name="usuario" id="cadastro-usuario-input" required>
       </fieldset>
 
       <fieldset class="conjunto-fieldset">
          <label for="senha">Senha:</label>
-         <input type="password" name="senha" id="cadastro-senha-input">
+         <input type="password" name="senha" id="cadastro-senha-input" required>
       </fieldset>
 
       <fieldset class="conjunto-fieldset">
          <label for="email">E-Mail:</label>
-         <input type="text" name="email" id="cadastro-email-input">
+         <input type="text" name="email" id="cadastro-email-input" required>
       </fieldset>
 
       <button type="submit">Criar conta!!!</button>
