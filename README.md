@@ -10,6 +10,14 @@ Pessoalmente - e antes de mais nada - quero _agradecer ao professor Jason_ por n
 
 Com o Purrsue, você pode cadastrar informações sobre seus gatinhos favoritos e deixar o sistema cuidar da parte complicada. Você só precisa logar, cadastrar seu bichano e pronto! Ele fica disponível para consulta até segunda ordem.
 
+## 3. Tema, Inspirações
+
+Explorei territórios que ainda não havia nesse projeto. Dessa vez, resolvi incorporar um pouco da [estética neobrutalista](https://blog.logrocket.com/ux-design/neubrutalism-web-design/) para websites.
+
+Bordas muito bem definidas, cores fortes e, ao mesmo tempo, um design plano. Isso tudo parecia se encaixar bem com a ideia do projeto. Escolhi um tema claro, pois eu estava apenas experimentando e o neobrutalismo funciona bem com cores claras.
+
+Espero que goste!
+
 ## 4. Rodar na sua máquina
 
 ### 4.1 Requisitos
