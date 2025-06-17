@@ -80,7 +80,7 @@ enum Status: int
             self::NAO_AUTORIZADO        => "Você não tem acesso suficiente para ver essa parte do site. Entre em uma conta válida e tente novamente.",
             self::CREDENCIAIS_INVALIDAS => "Credenciais inválidas. Entre com uma conta existente.",
             self::METODO_INVALIDO       => "Método Inválido. Esse recurso não pode ser acessado dessa forma.",
-            self::FORM_EM_BRANCO        => "Formulário em Branco. Preencha todos os campos do formulário.",
+            self::FORM_EM_BRANCO        => "Formulário em Branco. Preencha os campos necessários do formulário.",
             self::ERRO_NA_CONSULTA      => "Ocorreu um erro ao verificar seus dados. Tente novamente em alguns minutos.",
             self::USUARIO_EXISTENTE     => "Esse nome de usuário já está em uso. Tente novamente com outro nome de usuário.",
             self::EMAIL_EXISTENTE       => "Esse endereço de e-mail já está em uso. Tente novamente com outro endereço de e-mail.",
