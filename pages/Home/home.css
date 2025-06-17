@@ -44,6 +44,44 @@ table {
     }
 }
 
+.fotinhos {
+    margin: auto;
+
+    background-color: black;
+
+    &:popover-open {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap: 1ch;
+
+        /* border: none; */
+        border-radius: 20px;
+        
+        width: fit-content;
+        max-width: 80vw;
+        max-height: 80dvh;
+    }
+    
+    & img {
+        border-radius: 20px;
+        
+        height: 100%;
+        object-fit: cover;
+        transition: transform .2s ease-out;
+
+        &:hover {
+            position: relative;
+            
+            transform: scale(1.02);
+        }
+    }
+
+}
+
 #como-assim-h3 {
     position: absolute;
 

@@ -105,19 +105,22 @@ require_once "$ROOT/auth/cadeado.php";
                         </a>
 
                         <button popovertarget="fotinho<?= $gato['id'] ?>">Ver fotos!!</button>
-
-                        <!-- Popover com fotinhos do gato -->
-                        <div id="fotinho<?= $gato['id'] ?>" class="fotinhos" popover>
-                            <?php foreach ($gato['fotos'] as $foto): ?>
-                                <img src="<?= $foto ?>" alt="fotinho do gato">
-                            <?php endforeach; ?>
-                        </div>
-
                     </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
+
+    <!-- Carregar as fotinhos do bixano!! -->
+    <?php foreach ($gatos as $gato): ?>
+        <!-- Popover com fotinhos do gato -->
+        <div id="fotinho<?= $gato['id'] ?>" class="fotinhos" popover>
+            <?php foreach ($gato['fotos'] as $foto): ?>
+                <img src="<?= $foto ?>" alt="fotinho do gato">
+            <?php endforeach; ?>
+        </div>
+    <?php endforeach ?>
+
     <script src="home.js"></script>
 </body>
 
