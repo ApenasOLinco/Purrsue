@@ -6,6 +6,11 @@
  */
 function bicuda(Status $codigo, string $pagina = "/pages/index.php")
 {
+    if (str_contains($pagina, '?')) {
+        header("location:$pagina&codigo=$codigo->value");
+        die;
+    }
+
     header("location:$pagina?codigo=$codigo->value");
     die; // É tão forte que o código morre
 }
