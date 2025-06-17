@@ -21,17 +21,17 @@ Com o Purrsue, você pode cadastrar informações sobre seus gatinhos favoritos 
 
 ### 3.2 Clonando o repositório
 
-- Na sua linha de comando, viaje para a pasta htdocs do xampp:
+1. Na sua linha de comando, viaje para a pasta htdocs do xampp:
 
     ![Primeiro passo](/Readme/01%20-%20Pasta%20htdocs.png)
 
     - No Windows, esse caminho fica, normalmente, em **C:/xampp/htdocs**.
     - No Ubuntu, você pode encontrá-la em **/opt/lampp/htdocs** (Imagem acima).
 
-- **IMPORTANTE**: Esvazie o conteúdo de seu htdocs.
+2. **IMPORTANTE**: Esvazie o conteúdo de seu htdocs.
     O projeto foi criado com a ideia de que rodará diretamente no htdocs, sem nenhuma outra pasta intermediária!
 
-- _Rode o seguinte comando_ no seu terminal para clonar o repositório na sua máquina na pasta atual:
+3. **Rode o seguinte comando** no seu terminal para clonar o repositório na sua máquina na pasta atual:
 
     `git clone https://github.com/ApenasOLinco/Purrsue.git ./`
 
@@ -42,3 +42,9 @@ Com o Purrsue, você pode cadastrar informações sobre seus gatinhos favoritos 
     ![Modelo correto](/Readme/02%20-%20Modelo%20correto%20do%20repositório.png)
 
     Todos os arquivos diretamente na pasta htdocs.
+
+    ❌ **Incorreto**:
+
+    ![Modelo incorreto](/Readme/03%20-%20Modelo%20incorreto%20do%20repositório.png)
+
+    Os arquivos foram clonados para uma dentro de htdocs.
