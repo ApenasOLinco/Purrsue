@@ -55,7 +55,7 @@ Espero que goste!
 
     ![Modelo incorreto](/Readme/03%20-%20Modelo%20incorreto%20do%20repositório.png)
 
-    Os arquivos foram clonados para uma dentro de htdocs.
+    Os arquivos foram clonados para uma pasta que fica dentro do htdocs.
 
 Considerando que seus arquivos estejam como na imagem do exemplo correto, você está livre para iniciar o web server e o phpmyadmin!
 
